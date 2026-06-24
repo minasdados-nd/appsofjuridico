@@ -1,0 +1,48 @@
+name: telaloginapp
+description: "SofJuridico"
+publish_to: 'none'
+
+version: 1.0.0+5
+
+environment:
+  sdk: ^3.11.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_inappwebview: ^6.1.5
+  flutter_inappwebview_android: ^1.0.13
+  permission_handler: ^11.3.1
+  image_picker: ^1.2.1
+  http: ^1.6.0
+  path_provider: ^2.1.2
+  gallery_saver_plus: ^3.0.1
+  flutter_native_splash: ^2.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: assets/icon.png
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/splash.png
+    - assets/icon.png
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/splash.png
+  android: true
+  ios: true
+  android_12:
+    image: assets/splash.png
+    color: "#FFFFFF"
