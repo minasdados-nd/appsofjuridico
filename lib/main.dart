@@ -102,7 +102,7 @@ class _WebViewAppState extends State<WebViewApp> {
                   supportZoom: false,
                   allowFileAccess: true,
                   allowContentAccess: true,
-                  userAgent: "SOFJuridicoApp/1.0 (Android)",
+                  userAgent: "SOFJuridicoApp/1.0 (${Platform.isIOS ? 'iOS' : 'Android'})",
                 ),
                 pullToRefreshController: pullToRefreshController,
 
