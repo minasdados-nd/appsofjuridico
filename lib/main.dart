@@ -94,7 +94,7 @@ class _WebViewAppState extends State<WebViewApp> {
             children: [
               InAppWebView(
                 initialUrlRequest:
-                URLRequest(url: WebUri("https://app.sofjuridico.com.br")),
+                URLRequest(url: WebUri("https://app.sofjuridico.com.br/authios")),
                 initialSettings: InAppWebViewSettings(
                   javaScriptEnabled: true,
                   mediaPlaybackRequiresUserGesture: false,
