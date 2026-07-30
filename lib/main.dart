@@ -93,8 +93,11 @@ class _WebViewAppState extends State<WebViewApp> {
           child: Stack(
             children: [
               InAppWebView(
-                initialUrlRequest:
-                URLRequest(url: WebUri("https://app.sofjuridico.com.br/authios")),
+                initialUrlRequest: URLRequest(
+                  url: WebUri(
+                    "https://app.sofjuridico.com.br${Platform.isIOS ? '/authios' : ''}",
+                  ),
+                ),
                 initialSettings: InAppWebViewSettings(
                   javaScriptEnabled: true,
                   mediaPlaybackRequiresUserGesture: false,
@@ -102,7 +105,8 @@ class _WebViewAppState extends State<WebViewApp> {
                   supportZoom: false,
                   allowFileAccess: true,
                   allowContentAccess: true,
-                  userAgent: "SOFJuridicoApp/1.0 (${Platform.isIOS ? 'iOS' : 'Android'})",
+                  userAgent:
+                      "SOFJuridicoApp/1.0 (${Platform.isIOS ? 'iOS' : 'Android'})",
                 ),
                 pullToRefreshController: pullToRefreshController,
 
@@ -136,8 +140,7 @@ class _WebViewAppState extends State<WebViewApp> {
                 },
               ),
 
-              if (isLoading)
-                const Center(child: CircularProgressIndicator()),
+              if (isLoading) const Center(child: CircularProgressIndicator()),
             ],
           ),
         ),
